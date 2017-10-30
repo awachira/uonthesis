@@ -1,0 +1,10 @@
+auto
+*~
+*.log
+*.aux
+*.blg
+*.bbl
+*.lot
+*.lof
+*.dvi
+*.pdf

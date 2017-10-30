@@ -1,0 +1,140 @@
+\documentclass[11pt,leqno]{article}
+%\usepackage{times}
+
+\usepackage[normalem]{ulem}
+\usepackage{url}
+\usepackage{/home/wachira/texpkgs/changepage/changepage}
+\usepackage{/home/wachira/texpkgs/titlesec/titlesec}
+\usepackage{calc}
+%\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\urlstyle{same}
+\usepackage{lgrind}
+\usepackage{graphicx}
+
+\usepackage{multirow}
+% For \begin{sideways}
+\usepackage{rotating}
+
+\usepackage[table]{xcolor}
+%\usepackage[singlelinecheck=off,justification=centering]{caption}
+\usepackage[singlelinecheck=off]{caption}
+\usepackage[section]{placeins} % add \FloatBarrier for tables and figures :D awesome!!
+\pagestyle{plain}
+%\pagestyle{headings}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+%\usepackage{enumerate}
+\usepackage[inline]{enumitem}
+\urlstyle{same}
+
+\usepackage{amsmath}
+\usepackage{float} % for 'H' for direct placement 
+
+\usepackage{longtable}
+
+%%% Rotate a table in landscape mode
+\usepackage{geometry}
+% \usepackage{pdflscape}
+\usepackage{lscape}
+%%% 
+%\usepackage{qtree}
+%\usepackage{xyling}
+\newtheorem{theorem}{Theorem}[subsection]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{lemma}{Lemma}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{corollary}{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%% Wachira
+\newenvironment{corollary}[1][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{lemma}[1][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{proposition}[1][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+
+% Numbering equations per sub-section
+\numberwithin{equation}{subsection}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textsc{\Huge \textbf{University of Nairobi}}\\[2cm]
+
+\textsc{\LARGE School of Mathematics}\\[.5cm]
+\textsc{\Large Department of Statistics}\\[3cm]
+
+% \textsc{\Large SST608: Professional Issues in Statistics}\\[1cm]
+
+% \textsc{\large \textit{Assignment II:} Outline of Proposed MSc Dissertation.}\\[1cm]
+
+\begin{minipage}[t]{.2\textwidth}
+\begin{flushleft}
+\textsc{\large \textbf{\textit{Title:}}}
+\end{flushleft}
+\end{minipage}%
+%
+\begin{minipage}[t]{.8\textwidth}
+\begin{flushleft}
+\textsc{\large \textbf{\uuline{CONSTRUCTION OF SOME BALANCED FACTORIAL DESIGNS (BFDs).}}}
+\end{flushleft}
+\end{minipage}\\[1cm]%
+
+\begin{minipage}[t]{.5\textwidth}
+\begin{flushleft}
+\textit{Student:}\\ Wanyoike J. Ngaii\\ (\texttt{I56/81931/2012})
+\end{flushleft}
+\end{minipage}%
+%
+\begin{minipage}[t]{.5\textwidth}
+\begin{flushright}
+\textit{Supervisor:}\\ Prof. M. M. Manene
+\end{flushright}
+\end{minipage}\\[0.25cm]%
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+%\vfill
+
+%{\large \today}
+ 
+\end{center}
+\end{titlepage}
+
+%\include{cover}
+%\pagenumbering{roman} %
+% Some departments (e.g. 5) require an additional signature page.  See  signature.tex for more information and uncomment the following line if applicable.
+% \include{signature}
+\pagestyle{plain}
+%\include{contents}
+\pagenumbering{arabic} % restart in arabic
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+\include{chap5}
+%\pagenumbering{roman} %
+\appendix
+%\include{appa}
+%\include{appb}
+\include{biblio}
+\end{document}

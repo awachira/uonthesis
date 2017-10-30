@@ -1,0 +1,805 @@
+@preamble{ "\newcommand{\noopsort}[1]{} "
+	# "\newcommand{\printfirst}[2]{#1} "
+	# "\newcommand{\singleletter}[1]{#1} "
+	# "\newcommand{\switchargs}[2]{#2#1} " }
+
+@ARTICLE{article-minimal,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+}
+
+@ARTICLE{article-full,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@ARTICLE{article-crossref,
+   crossref = {WHOLE-JOURNAL},
+   key = "",
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   pages = "73+",
+   note = "This is a cross-referencing ARTICLE entry",
+}
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   month = jul,
+   note = {The entire issue is devoted to gnats and gnus
+		(this entry is a cross-referenced ARTICLE (journal))},
+}
+
+@INBOOK{inbook-minimal,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973b}}1973",
+   chapter = "1.2",
+}
+
+@INBOOK{inbook-full,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   pages = "10--119",
+   note = "This is a full INBOOK entry",
+}
+
+@INBOOK{inbook-crossref,
+   crossref = "whole-set",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   note = "This is a cross-referencing INBOOK entry",
+}
+
+@BOOK{book-minimal,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973c}}1981",
+}
+
+@BOOK{book-full,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a full BOOK entry",
+}
+
+@BOOK{book-crossref,
+   crossref = "whole-set",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a cross-referencing BOOK entry",
+}
+
+@BOOK{whole-set,
+   author = "Donald E. Knuth",
+   publisher = "Addison-Wesley",
+   title = "The Art of Computer Programming",
+   series = "Four volumes",
+   year = "{\noopsort{1973a}}{\switchargs{--90}{1968}}",
+   note = "Seven volumes planned (this is a cross-referenced set of BOOKs)",
+}
+
+@BOOKLET{booklet-minimal,
+   key = "Kn{\printfirst{v}{1987}}",
+   title = "The Programming of Computer Art",
+}
+
+@BOOKLET{booklet-full,
+   author = "Jill C. Knvth",
+   title = "The Programming of Computer Art",
+   howpublished = "Vernier Art Center",
+   address = "Stanford, California",
+   month = feb,
+   year = 1988,
+   note = "This is a full BOOKLET entry",
+}
+
+@INCOLLECTION{incollection-minimal,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   publisher = "Academic Press",
+   year = 1977,
+}
+
+@INCOLLECTION{incollection-full,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   chapter = 3,
+   type = "Part",
+   pages = "179--183",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a full INCOLLECTION entry",
+}
+
+@INCOLLECTION{incollection-crossref,
+   crossref = "whole-collection",
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   pages = "179--183",
+   note = "This is a cross-referencing INCOLLECTION entry",
+}
+
+@BOOK{whole-collection,
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   title = "High Speed Computer and Algorithm Organization",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@MANUAL{manual-minimal,
+   key = "Manmaker",
+   title = "The Definitive Computer Manual",
+}
+
+@MANUAL{manual-full,
+   author = "Larry Manmaker",
+   title = "The Definitive Computer Manual",
+   organization = "Chips-R-Us",
+   address = "Silicon Valley",
+   edition = "Silver",
+   month = apr # "-" # may,
+   year = 1986,
+   note = "This is a full MANUAL entry",
+}
+
+@MASTERSTHESIS{mastersthesis-minimal,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   year = 1988,
+}
+
+@MASTERSTHESIS{mastersthesis-full,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   type = "Master's project",
+   address = "English Department",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full MASTERSTHESIS entry",
+}
+
+@MISC{misc-minimal,
+   key = "Missilany",
+   note = "This is a minimal MISC entry",
+}
+
+@MISC{misc-full,
+   author = "Joe-Bob Missilany",
+   title = "Handing out random pamphlets in airports",
+   howpublished = "Handed out at O'Hare",
+   month = oct,
+   year = 1984,
+   note = "This is a full MISC entry",
+}
+
+@STRING{STOC-key = "OX{\singleletter{stoc}}"}
+
+@STRING{ACM = "The OX Association for Computing Machinery"}
+
+@STRING{STOC = " Symposium on the Theory of Computing"}
+
+@INPROCEEDINGS{inproceedings-minimal,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   year = 1983,
+}
+
+@INPROCEEDINGS{inproceedings-full,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   pages = "133--139",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full INPROCEDINGS entry",
+}
+
+@INPROCEEDINGS{inproceedings-crossref,
+   crossref = "whole-proceedings",
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   organization = "",
+   pages = "133--139",
+   note = "This is a cross-referencing INPROCEEDINGS entry",
+}
+
+@PROCEEDINGS{proceedings-minimal,
+   key = STOC-key,
+   title = "Proc. Fifteenth Annual" # STOC,
+   year = 1983,
+}
+
+@PROCEEDINGS{proceedings-full,
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   title = "Proc. Fifteenth Annual" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full PROCEEDINGS entry",
+}
+
+@PROCEEDINGS{whole-proceedings,
+   key = STOC-key,
+   organization = ACM,
+   title = "Proc. Fifteenth Annual" # STOC,
+   address = "Boston",
+   year = 1983,
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   note = "This is a cross-referenced PROCEEDINGS",
+}
+
+@PHDTHESIS{phdthesis-minimal,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   year = 1988,
+}
+
+@PHDTHESIS{phdthesis-full,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   type = "{PhD} Dissertation",
+   address = "Department of French",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full PHDTHESIS entry",
+}
+
+@TECHREPORT{techreport-minimal,
+   author = "Tom Terrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   year = 1988,
+}
+
+@TECHREPORT{techreport-full,
+   author = "Tom T{\'{e}}rrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   type = "Wishful Research Result",
+   number = "7",
+   address = "Computer Science Department, Fanstord, California",
+   month = oct,
+   year = 1988,
+   note = "This is a full TECHREPORT entry",
+}
+
+@UNPUBLISHED{unpublished-minimal,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   note = "Talk at Fanstord University (this is a minimal UNPUBLISHED entry)",
+}
+
+@UNPUBLISHED{unpublished-full,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   month = nov # ", " # dec,
+   year = 1988,
+   note = "Talk at Fanstord University (this is a full UNPUBLISHED entry)",
+}
+
+@MISC{random-note-crossref,
+   key = {Volume-2},
+   note = "Volume~2 is listed under Knuth \cite{book-full}"
+}
+
+ @Comment "guptanigam"
+@Comment Warning--I didn't find a database entry for "guptanigam"
+
+ @Comment "pasard10"
+@Comment Warning--I didn't find a database entry for "pasard10"
+
+
+@ARTICLE{SriChopra71b,
+   author = {Srivastava J. N and Chopra D. V},
+   title = {Balanced Optimal $2^m$ Fractional Factorial Designs of Resolution $vm \leq 6$ Technometrics},
+   journal = {Amsterdam},
+   year = 1971,
+   volume = 13,
+   @Comment number = 7,
+   pages = "257--269",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+
+@ARTICLE{SriChopra72,
+   author = {Srivastava J. N and Chopra D. V},
+   title = {Balanced Arrays and Orthogonal Arrays in a Survery of Combinatorial Theore},
+   journal = {Amsterdam},
+   year = 1972,
+   volume = 29,
+   pages = "411--428",
+}
+
+ @Comment "Shah58"
+@ARTICLE{Shah58,
+   author = {Shah B. V},
+   title = {On Balancing In Factorial Experiments},
+   journal = {Annals of Mathematical Statistics},
+   year = 1958,
+   volume = 29,
+   @Comment number = 7,
+   pages = "766--799",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+ @Comment "Bose47"
+@ARTICLE{Bose47,
+   author = {Bose, R. C},
+   title = {Mathematical Theory of Symmetrical Factorial Design},
+   journal = {Sankhya},
+   year = 1947,
+   volume = 8,
+   pages = "107--166",
+}
+
+ @Comment "NairRao48"
+@ARTICLE{NairRao48,
+   author = {Nair K. R and Rao C. R},
+   title = {Confounding in Asymmetrical factorial experiments},
+   journal = {Journal of the Royal Statistical Society},
+   year = 1948,
+   volume = B10,
+   pages = "109--131",
+}
+
+ @Comment "KishenSrivastava59"
+@ARTICLE{KishenSrivastava59,
+   author = {Kishen K and Srivastava, J. N},
+   title = {Mathematical Theory of Confounding in Asymmetrical and Symmetrical Factorial Designs},
+   journal = {Journal of the Indian Society of Agricultural Statistics},
+   year = 1959,
+   volume = 11,
+   pages = "73--110",
+}
+
+ @Comment "KishenTyagi64"
+@ARTICLE{KishenTyagi64,
+   author = {Kishen K and Tyagi, B. N},
+   title = {On Construction and Analysis of Balanced Factorial Designs},
+   journal = {Calcutta Statistical Association},
+   year = 1964,
+   volume = 13,
+   pages = "123--149",
+}
+
+ @Comment "Das60"
+@ARTICLE{Das60,
+   author = {Das M. N},
+   title = {Fractional Replications as Asymmetrical Factorial Designs},
+   journal = {Journal of the Indian Society of Agricultural Statistics},
+   year = 1960,
+   volume = 12,
+   pages = "159--174",
+}
+
+ @Comment "KempHinkel05"
+@BOOK{KempHinkel05,
+   editor = "Hinkelmann, K and Kempthorne, O",
+   title = "Design and Analysis of Experiments",
+   @Comment booktitle = "High Speed Computer and Algorithm Organization",
+   number = 2,
+   @Comment series = "Fast Computers",
+   publisher = "Wiley",
+   address = "New York",
+   edition = "Second",
+   @Comment month = sep,
+   year = 2005,
+   @Comment note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+ @Comment "PuriNigam76"
+@ARTICLE{PuriNigam76,
+   author = {Puri P. D and Nigam A. K},
+   title = {Balanced Factorial Experiments I},
+   journal = {Communications in Statistics - Theory \& Methods},
+   year = 1976,
+   volume = A5,
+   pages = "599--619",
+}
+
+ @Comment "PuriNigam78"
+@ARTICLE{PuriNigam78,
+   author = {Puri P. D and Nigam A. K},
+   title = {Balanced Factorial Experiments II},
+   journal = {Communications in Statistics - Theory \& Methods},
+   year = 1978,
+   volume = A7,
+   pages = "591--605",
+}
+
+ @Comment "GuptaMukerjee89"
+@BOOK{GuptaMukerjee89,
+   editor = "Gupta and Mukerjee R",
+   title = "A Calculus for Factorial Experiments",
+   @Comment booktitle = "High Speed Computer and Algorithm Organization",
+   number = 2,
+   @Comment series = "Fast Computers",
+   publisher = "Springer-Verlag",
+   address = "New York",
+   edition = "Second",
+   @Comment month = sep,
+   year = 1989,
+   @Comment note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@ARTICLE{AddelKemp61,
+   author = {Addelman,S and Kempthorne, Oscar},
+   title = {Some Main Effect Plans and Orthogonal Arrays of Strength Two},
+   journal = {Annual Journal of Mathematical Statistics},
+   year = 1961,
+   volume = 32,
+   @Comment number = 7,
+   pages = "1167--1176",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{BoseBush52,
+   author = {Bose, R.C and Bush K. A},
+   title = {Orthogonal Arrays of Strength Two and Three},
+   journal = {Annual Journal of Mathematical Statistics},
+   year = 1952,
+   volume = 23,
+   @Comment number = 7,
+   pages = "508--524",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{BoseNair39,
+   author = {Bose R. C and Nair K. R},
+   title = {Partially Balanced Incomplete Block Designs},
+   journal = {Sankya},
+   year = 1939,
+   volume = 4,
+   @Comment number = 7,
+   pages = "337--372",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{KempKlaus05,
+   author = {Oscar Kempthorne and Klaus},
+   title = {Advanced Experimental Designs},
+   journal = {},
+   year = 2005,
+   volume = 2,
+   @Comment number = 7,
+   @Comment pages = "73+",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{HedWallis77,
+   author = {A. Hedayat and W. D. Wallis},
+   title = {Hadamard Matrices and their Applications},
+   journal = {Annals of Statistics},
+   year = 1977,
+   volume = 6,
+   number = 6,
+   pages = "1184--1238",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@BOOK{DasGiri86,
+   editor = "M. N. Das and N. C. Giri",
+   title = "Design and Analysis of Experiments",
+   @Comment booktitle = "High Speed Computer and Algorithm Organization",
+   @Comment number = 23,
+   @Comment series = "Fast Computers",
+   @Comment publisher = "Academic Press",
+   @Comment address = "New York",
+   edition = "Second",
+   @Comment month = sep,
+   year = 1986,
+   @Comment note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@ARTICLE{Chak56,
+   author = {Chakravati, I. M},
+   title = {Fractional Replication in Asymmetrical Factorial Designs and Partially Balanced Arrays},
+   journal = {Sankhya},
+   year = 1956,
+   volume = 17,
+   @Comment number = 7,
+   pages = "143--164",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{Chak61,
+   author = {Chakravati, I. M},
+   title = {On some Methods of Constructions of Partially Balanced Arrays},
+   journal = {Annals of Mathematical Statistics},
+   year = 1961,
+   volume = 32,
+   @Comment number = 7,
+   pages = "1181--1185",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{Hinkelmann64,
+   author = {Hinkelmann, K},
+   title = {Extended Group Divisible Partially Balanced Incomplete Block Design},
+   journal = {Annals of Mathematical Statistics},
+   year = 1964,
+   volume = 35,
+   @Comment number = 7,
+   pages = "681--695",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{Guptaetal11,
+   author = {V. K. Gupta and A. K. Nigam and Rajendar Pasard and L. M. Bhar and Sutrat Keshori Behera},
+   title = {On Constructions of Resolvable Block Designs for Factorial Experiments with Full Main Efficiencies},
+   journal = {Journal of the Indian Society of Agricultural Statistics},
+   year = 2011,
+   volume = 65,
+   number = 3,
+   pages = "305--315",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{Gupta08,
+   author = {V. K. Gupta},
+   title = {On Orthogonal Arrays and Their Applications},
+   journal = {Journal of the Indian Society of Agricultural Statistics},
+   year = 2008,
+   volume = 62,
+   number = 1,
+   pages = "1--18",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@PHDTHESIS{Chungyi82,
+   author = {Chung-Yi Suen},
+   title = "On Construction of Balanced Factorial Experiments",
+   school = "University of North Carolina at Chapel Hill",
+   type = "{PhD} Dissertation",
+   address = "Institute of Statistics",
+   year = 1982,
+}
+
+@ARTICLE{Chungyi11,
+   author = {Chung-Yi Suen},
+   title = {On the Construction of Asymmetrical Orthogonal Arrays},
+   journal = {Statistica Sinica},
+   year = 2011,
+   volume = 11,
+   @Comment number = 7,
+   pages = "241-260",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{Sreenath11,
+   author = {P. R. Sreenath},
+   title = {On Designs for Asymmetrical Factorial Experiments through Confounded Symmetricals},
+   journal = {Statistics and Applications},
+   year = 2011,
+   volume = 9,
+   @Comment number = 7,
+   pages = "71-81",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+ @Comment "Shah60"
+@ARTICLE{Shah60,
+   author = {Shah B. V},
+   title = {Balanced Factorial Experiments},
+   journal = {Annals of Mathematical Statistics},
+   year = 1960,
+   volume = 31,
+   @Comment number = 7,
+   pages = "502--514",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{,
+   author = {},
+   title = {},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
+
+@BOOK{MukerWu06,
+   editor = "Mukerjee, Rahul and C.F. Jeff Wu",
+   title = "A Modern Theory of Factorial Designs",
+   booktitle = "A Modern Theory of Factorial Designs",
+   @Comment number = 23,
+   series = "Statistics",
+   publisher = "Springer",
+   address = "New York",
+   @Comment edition = "Third",
+   @Comment month = sep,
+   @Comment year = 1977,
+   @Comment note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+ @Comment "Kshir66"
+@ARTICLE{Kshir66,
+   author = {Kshirsagar, A. M},
+   title = {Balanced Factorial Designs},
+   journal = {Journal of the Royal Statistical Society},
+   year = 1966,
+   volume = B28,
+   @Comment number = 7,
+   pages = "559--567",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+ @Comment "KurkZelen63"
+@ARTICLE{KurkZelen63,
+   author = {Kurkjian, B and Zelen, M},
+   title = {Applications of Calculus of Factorial Arrangements. I Block and Direct Product Designs},
+   journal = {Biometrica},
+   year = 1963,
+   volume = 50,
+   @Comment number = 7,
+   pages = "63--73",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+ @Comment "Mukerjee86"
+@ARTICLE{Mukerjee86,
+   author = {Mukerjee, Rahul},
+   title = {Construction of Orthogonal Factorial designs controlling Interaction Efficiencies},
+   journal = {Communications in Statistics - Theory and Methods},
+   year = 1986,
+   volume = 15,
+   number = 5,
+   pages = "1535--1548",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@PHDTHESIS{Mukerjee80b,
+   author = {Mukerjee, Rahul},
+   title = {Asymmetric Factorial Designs and Allied Problems},
+   school = "University of Calcutta",
+   type = "{PhD} Dissertation",
+   @Comment address = "Institute of Statistics",
+   @Comment month = jun # "-" # aug,
+   year = 1980,
+   @Comment note = "This is a full PHDTHESIS entry",
+}
+
+
+@ARTICLE{Mukerjee84,
+   author = {Mukerjee, Rahul},
+   title = {Applications of Some generalizations of Kronecker products in the Construction of Factorial Designs},
+   journal = {Journal of the Indian Society of Agricultural Statistics},
+   year = 1984,
+   volume = 36,
+   @Comment number = 7,
+   pages = "38--46",
+   @Comment month = jul,
+   @Comment note = "This is a full ARTICLE entry",
+}
+
+@BOOK{ColbournDinitz07,
+   editor = "Charles J. Colbourn and Jeffrey H. Dinitz",
+   title = "Handbook of Combinatorial Designs",
+   booktitle = "Handbook of Combinatorial Designs",
+   @Comment number = 23,
+   series = "Statistics",
+   publisher = "Taylor \& Francis",
+   @Comment address = "New York",
+   @Comment edition = "Third",
+   @Comment month = sep,
+   @Comment year = 1977,
+   @Comment note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@ARTICLE{
+   author = {},
+   title = {},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
+
+@ARTICLE{article-full,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
